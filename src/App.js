@@ -4,6 +4,8 @@ import './App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import axios from 'axios';
+
 
 
 
@@ -19,6 +21,13 @@ import Country from "./components/Country";
 
 
 function App() {
+
+  axios.get("https://restcountries.com/v3.1/all")
+  .then(response => {
+    console.log(response.data)
+
+  })
+
   /* const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode; */
 
