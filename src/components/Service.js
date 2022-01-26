@@ -42,7 +42,6 @@ export default function Services() {
         return (
           <div className="service">
             <div className="icon">
-              <p>{service.id}</p>
               <img src={service.icon} alt="" />
             </div>
             <h3>{service.title}</h3>
