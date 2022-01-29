@@ -10,6 +10,8 @@ import { useBlogTextInfoContentStyles } from '@mui-treasury/styles/textInfoConte
 import { useOverShadowStyles } from '@mui-treasury/styles/shadow/over';
 
 import Destination1 from "../img/Destination1.png";
+import HeroCard from './HeroCard';
+import CardInfo from './CardInfo';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -18,11 +20,11 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     transition: '0.3s',
     boxShadow: '0px 14px 80px rgba(34, 35, 58, 0.2)',
     position: 'relative',
-    maxWidth: 500,
+    maxWidth: 800,
     marginLeft: 'auto',
     marginBottom: 30,
     overflow: 'initial',
-    background: '#ffffff',
+    background: '#fffff',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -33,12 +35,12 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     },
   },
   media: {
-    width: '88%',
+    width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginTop: spacing(-3),
+    marginTop: spacing(-1),
     height: 0,
-    paddingBottom: '48%',
+    paddingBottom: '45%',
     borderRadius: spacing(2),
     backgroundColor: '#fff',
     position: 'relative',
@@ -55,7 +57,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
       left: 0,
       width: '100%',
       height: '100%',
-      backgroundImage: 'linear-gradient(147deg, #fe8a39 0%, #4361ee 74%)',
+      backgroundImage: 'linear-gradient(147deg, #FFE162 0%, #4361ee 74%)',
       borderRadius: spacing(2), // 16
       opacity: 0.5,
     },
@@ -77,7 +79,9 @@ export const Country = React.memo(function BlogCard() {
   } = useBlogTextInfoContentStyles();
   const shadowStyles = useOverShadowStyles();
   return (
-    <Card style={{marginTop:"50px"}} className={cx(styles.root, shadowStyles.root)}>
+    <div>
+      <HeroCard/>
+      <Card style={{marginTop:"50px"}} className={cx(styles.root, shadowStyles.root)}>
       <CardMedia
         className={styles.media}
         image={Destination1}/>
@@ -93,6 +97,9 @@ export const Country = React.memo(function BlogCard() {
        
       </CardContent>
     </Card>
+    <CardInfo/>
+    </div>
+
   );
 });
 

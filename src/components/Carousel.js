@@ -16,12 +16,9 @@ export default class Responsive extends Component {
     const mystyle = {
       width: "300px",
       height:"400px",
-      marginLeft:"20px"
-      
-      /*  backgroundColor: "DodgerBlue",
-      padding: "10px",
-      fontFamily: "Arial" */
+      marginLeft:"20px",
     };
+    
 
   
     var settings = {
@@ -61,8 +58,8 @@ export default class Responsive extends Component {
     return (
 
       <div>
-        <Link className="nav-link" aria-current="page" to="/cities">
-        <h2> Cities </h2>
+        <Link className="nav-link" aria-current="page" to="/cities" >
+        <h2 style={{textAlign:"center", color:"#000"}}> Popular MyTineraries </h2>
          </Link>
         
         <Slider {...settings}>
