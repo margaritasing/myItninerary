@@ -22,11 +22,23 @@ import Country from "./components/Country";
 
 function App() {
 
-  axios.get("https://restcountries.com/v3.1/all")
+  const data = []  
+  const dato = []
+  axios.get("http://localhost:4000/api/datos")
   .then(response => {
-    console.log(response.data)
+    data.push(...response.data.response.cities)
+  })
+
+   axios.get("http://localhost:4000/api/itinerary")
+  .then(response => {
+    data.push(...response.data.response.itinerary)
 
   })
+
+
+  
+
+
 
   /* const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode; */
@@ -38,7 +50,7 @@ function App() {
      
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cities" element={<Cities />} />
+        <Route path="/cities" element={<Cities data = {data} />}/>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/city" element={<CardCities />} />

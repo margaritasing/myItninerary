@@ -12,52 +12,10 @@ import info2 from "../img/info2.png";
 import info3 from "../img/info3.png";
 
 
-export default function CardCities() {
-  const data = [
-    {
-      image: Destination1,
-      title: "Singapore",
-      subTitle: "Singapore, officialy thr Republic of Singapore, is a",
-      cost: "38,800",
-      duration: "Approx 2 night trip",
-    },
-    {
-      image: Destination2,
-      title: "Thailand",
-      subTitle: "Thailand is a Southeast Asia country. It's known for",
-      cost: "54,200",
-      duration: "Approx 2 night trip",
-    },
-    {
-      image: Destination3,
-      title: "Paris",
-      subTitle: "Paris, France's capital, is a major European city and a",
-      cost: "45,500",
-      duration: "Approx 2 night trip",
-    },
-    {
-      image: Destination4,
-      title: "New Zealand",
-      subTitle: "New Zealand is an island country in the",
-      cost: "24,100",
-      duration: "Approx 1 night trip",
-    },
-    {
-      image: Destination5,
-      title: "Bora Bora",
-      subTitle: "Bora Bora is a small South Pacific island northwest of",
-      cost: "95,400",
-      duration: "Approx 2 night 2 day trip",
-    },
-    {
-      image: Destination6,
-      title: "London",
-      subTitle: "London, the capital of England and the United",
-      cost: "38,800",
-      duration: "Approx 3 night 2 day trip",
-    },
-  ];
+export default function CardCities(props) {
 
+ 
+  
   const packages = [
     "The Weekend Break",
     "The Package Holiday",
@@ -87,23 +45,26 @@ export default function CardCities() {
         </ul>
       </div>
       <div className="destinations">
-        {data.map((destination) => {
+        {props.data.map((destination) => {
           return (
             <div className="destination">
-              <img src={destination.image} alt="" />
-              <h3>{destination.title}</h3>
-              <p>{destination.subTitle}</p>
+              <img src={destination.img} alt="" />
+              <h2>{destination.name}</h2>
+              <h3>{destination.country}</h3>              
+              <p>{destination.continents}</p>
+              <p>{destination.description}</p>
+              <p>{destination.demonym}</p>
               <div className="info">
                 <div className="services">
                   <img src={info1} alt="" />
                   <img src={info2} alt="" />
                   <img src={info3} alt="" />
                 </div>
-                <h4>{destination.cost}</h4>
+                <h4>{destination.currency}</h4>
               </div>
               <div className="distance">
-                <span>1000 Kms</span>
-                <span>{destination.duration}</span>
+                <span>{destination.region}</span>
+                <span>{destination.language}</span>
               </div>
               <Link type="button" className="btn btn-info" to="/country">
               Info

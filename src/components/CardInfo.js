@@ -5,10 +5,11 @@ import Imagen2 from "../img/singapur3.jpg"
 import Imagen3 from "../img/singapur2.jpg"
 import CardInfoTwo from "./CardInfoTwo";
 
+
 const CardInfo = () => {
 
     return (
-        <Section>
+         <Section>        
             <CardInfoTwo/>
              <div className="card-group cardinfo" >
                 <div className="row ">
@@ -40,6 +41,7 @@ const CardInfo = () => {
                 </div>
             </div>
         </Section>
+    
 
      
 

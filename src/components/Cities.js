@@ -10,14 +10,16 @@ import ServiceCities from "./ServiceCities";
 
 
 
-const Cities = () => {
+const Cities = (props) => {
+ 
+
 
   return(
     <div className="cities" id="cities">
       
       <Top />
       <CheckboxesTags/>
-      <CardCities/>
+      <CardCities  data = {props.data}/>
       <Testimonials/>
       <ServiceCities/>
 
