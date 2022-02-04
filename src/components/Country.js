@@ -12,6 +12,8 @@ import { useOverShadowStyles } from '@mui-treasury/styles/shadow/over';
 import Destination1 from "../img/Destination1.png";
 import HeroCard from './HeroCard';
 import CardInfo from './CardInfo';
+import CardExtenden from './CardExtenden';
+
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -81,6 +83,7 @@ export const Country = React.memo(function BlogCard() {
   return (
     <div>
       <HeroCard/>
+      <CardExtenden/>
       <Card style={{marginTop:"50px"}} className={cx(styles.root, shadowStyles.root)}>
       <CardMedia
         className={styles.media}
@@ -97,6 +100,7 @@ export const Country = React.memo(function BlogCard() {
        
       </CardContent>
     </Card>
+    
     <CardInfo/>
     </div>
 
