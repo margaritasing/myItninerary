@@ -1,4 +1,4 @@
-const Itinerary = require("../models/itinerary")
+const Itinerary = require("../models/itinerary.js")
 
 const itynerarController = {
     ObteneDatos:async(req,res) => {
@@ -7,6 +7,7 @@ const itynerarController = {
         let error = null
         try {           
             itinerary = await Itinerary.find()
+            console.log(itinerary)
             
         } catch (err) {
             error = err
@@ -22,5 +23,7 @@ const itynerarController = {
 
     } // req=require res=response
 }
+
+
 
 module.exports = itynerarController

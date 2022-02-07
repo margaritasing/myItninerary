@@ -15,7 +15,7 @@ export default function CheckboxesTags() {
       id="checkboxes-tags-demo"
       options={topCountry}
       disableCloseOnSelect
-      getOptionLabel={(option) => option.pais}
+      getOptionLabel={(option) => option.continent}
       renderOption={(option, { selected }) => (
         <React.Fragment>
           <Checkbox
@@ -24,12 +24,12 @@ export default function CheckboxesTags() {
             style={{ marginRight: 8 }}
             checked={selected}
           />
-          {option.pais}
+          {option.continent}
         </React.Fragment>
       )}
       style={{ width: 300, marginLeft:10, marginTop:40 }}
       renderInput={(params) => (
-        <TextField {...params} variant="outlined" label="Country" placeholder="Favorites" />
+        <TextField {...params} variant="outlined" label="Continent" placeholder="Search" />
       )}
     />
   );
@@ -37,11 +37,9 @@ export default function CheckboxesTags() {
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const topCountry = [
-  { pais: 'Singapur'},
-  { pais: 'Francia'},
-  { pais: 'Japon'},
-  { pais: 'Thailandia'},
-  { pais: 'Bora bora'},
-  { pais: "Inglaterra"},
+  { continent: 'America'},
+  { continent: 'Asia'},
+  { continent: 'Europa'},
+  { continent: 'Oceania'},
   
 ];
