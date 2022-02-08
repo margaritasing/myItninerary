@@ -16,29 +16,29 @@ import Navbar from './components/NavBar'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
 import CardCities from "./components/CardCities";
-import Country from "./components/Country";
+import City from "./components/City";
+
+
 
 
 
 function App() {
 
   const data = []  
-  const dato = []
+  
   axios.get("http://localhost:4000/api/datos")
   .then(response => {
     data.push(...response.data.response.cities)
   })
 
-   axios.get("http://localhost:4000/api/itinerary")
+
+
+   const itinerary = []
+
+  axios.get("http://localhost:4000/api/itinerary")
   .then(response => {
-    data.push(...response.data.response.itinerary)
-
+    itinerary.push(response)   
   })
-
-
-  
-
-
 
   /* const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode; */
@@ -54,7 +54,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/city" element={<CardCities />} />
-        <Route path="/country" element={<Country />} />
+        <Route path="/country" element={<City />} />
       </Routes>
       <Footer />
      </div>

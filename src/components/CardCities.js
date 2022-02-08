@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Destination1 from "../img/Destination1.png";
-import Destination2 from "../img/Destination2.png";
-import Destination3 from "../img/Destination3.png";
-import Destination4 from "../img/Destination4.png";
-import Destination5 from "../img/Destination5.png";
-import Destination6 from "../img/Destination6.png";
 import info1 from "../img/info1.png";
 import info2 from "../img/info2.png";
 import info3 from "../img/info3.png";
 
 
 export default function CardCities(props) {
-
- 
   
   const packages = [
     "The Weekend Break",
@@ -48,7 +40,7 @@ export default function CardCities(props) {
         {props.data.map((destination) => {
           return (
             <div className="destination">
-              <img src={destination.img} alt="" />
+              <img className="cardcities" src={destination.image} alt="" />
               <h2>{destination.name}</h2>
               <h3>{destination.country}</h3>              
               <p>{destination.continents}</p>
@@ -85,6 +77,11 @@ const Section = styled.section`
   padding: 2rem 0;
   .title {
     text-align: center;
+  }
+  .cardcities{
+    width:100%;
+    height:250px;
+    border-radius:15px;
   }
   .packages {
     display: flex;
@@ -158,6 +155,11 @@ const Section = styled.section`
           border-bottom-width: 0.3rem;
         }
       }
+    }
+    .cardcities{
+      width:100%;
+      height:200px;
+      
     }
     .destinations {
       grid-template-columns: 1fr;
