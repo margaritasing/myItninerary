@@ -7,9 +7,9 @@ const itinerarySchema = new mongoose.Schema ({
     price: {type:String,require:true},
     time: {type:String,require:true},    
     img: {type:String,require:true},
-    // coordinates:{type:Number,require:true},
+   
 })
 
-const Itinerar = mongoose.model("itinerary",itinerarySchema)
+const Itinerary = mongoose.model("itinerary",itinerarySchema)
 
-module.exports = Itinerar;
+module.exports = Itinerary; 

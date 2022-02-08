@@ -33,12 +33,12 @@ function App() {
 
 
 
-  /* const dato = []
+   const itinerary = []
 
-  axios.get("http://localhost:4000/api/itynerary")
+  axios.get("http://localhost:4000/api/itinerary")
   .then(response => {
-    dato.push(...response.dato.response.itinerary)   
-  }) */
+    itinerary.push(response)   
+  })
 
   /* const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode; */
