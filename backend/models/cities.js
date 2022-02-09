@@ -9,7 +9,7 @@ const citiesSchema = new mongoose.Schema ({
     continents: {type:String,require:true},
     region: {type:String,require:true},
     demonym: {type:String,require:true},
-    img: {type:String,require:true},
+    image: {type:String,require:true},
     // coordinates:{type:Number,require:true},
 
 })

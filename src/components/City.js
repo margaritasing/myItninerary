@@ -4,15 +4,15 @@ import CardInfo from './CardInfo';
 import CardExtenden from './CardExtenden';
 import Coment from "./Coment";
 
+ 
 
-
-const City = () => {
+const City = (props) => {
 
 
     return(
         <div className="city">
         <HeroCard/>
-        <CardExtenden/>
+        <CardExtenden itinerary ={props.itinerary}/>
         <CardInfo/> 
         <Coment/>       
         </div>

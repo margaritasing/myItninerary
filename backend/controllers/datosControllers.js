@@ -27,13 +27,13 @@ const citiesController = {
 
     ObtenerItynerarios:async(req,res) => {
       
-      console.log(res)
+      
 
         let itinerary;
         let error = null
         try {           
             itinerary = await Itinerary.find()
-            console.log(itinerary)
+            
             
         } catch (err) {
             error = err

@@ -10,9 +10,9 @@ const Coment = () => {
 
         <div className="coment">
 
-        <div class="input-group input-group-lg formato">
+        <div className="input-group input-group-lg formato">
             
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"></input>
+            <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"></input>
         </div>
                
         <p className="fas"><span className="me-2"><i className="fas fa-heart"></i></span>3</p>         
