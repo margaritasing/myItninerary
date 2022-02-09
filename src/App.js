@@ -37,7 +37,7 @@ function App() {
 
   axios.get("http://localhost:4000/api/itinerary")
   .then(response => {
-    itinerary.push(response)   
+    itinerary.push(response.data.response.itinerary)   
   })
 
   /* const theme = useContext(ThemeContext)
@@ -54,7 +54,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/city" element={<CardCities />} />
-        <Route path="/country" element={<City />} />
+        <Route path="/country" element={<City itinerary = {itinerary} />} />
       </Routes>
       <Footer />
      </div>

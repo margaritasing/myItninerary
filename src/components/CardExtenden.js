@@ -5,38 +5,56 @@ import Imagen from "../img/ImgCity/Berlin.jpg"
 import Imagen1 from "../img/avatarImage.png"
 
 
-
-const CardExtenden = () =>{
-
-
-    return(
-        <Section>
+//aqui estoy revisando el porque no se pinta el componente.
+const CardExtenden = (props) =>{
+    console.log(props)  
+       
+   return(
+    <Section id="itinerario"> 
+  
+        
+         
         <div className="card mb-3 card-extend">
-            <div className="row g-0">
-                <div className="col-md-6">
-                <img src={Imagen} className="img-fluid rounded-start" alt="..."></img>
+        {props.itinerary.map((itinerario) => {
+            console.log(itinerario)
+           return(   
+             
+                  
+                <div className="row g-0">
+                    <div className="col-md-6">
+                    <img className="img-fluid rounded-start" src={itinerario.image} alt="..."></img>
+                    </div>
+                    <div className="col-md-6">
+                    <div className="card-body">
+                    <ul className="list-group list-group-horizontal">
+                        <li className="">#Tour</li>
+                        <li className="ms-2">#Vacation</li>
+                        <li className="ms-2">#Turist</li>
+                    </ul>
+                        <h5 className="card-title mt-2">{itinerario.name}</h5>
+                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <div className="">
+                    <img src={Imagen1} className= "info-imagen" alt=""></img>
+                    <p className="info-parra">Jhon Doe</p>               
+                    </div>
+                   
+                    </div>
                 </div>
-                <div className="col-md-6">
-                <div className="card-body">
-                <ul className="list-group list-group-horizontal">
-                    <li className="">#Tour</li>
-                    <li className="ms-2">#Vacation</li>
-                    <li className="ms-2">#Turist</li>
-                </ul>
-                    <h5 className="card-title mt-2">Berlin</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-                <div className="">
-                <img src={Imagen1} className= "info-imagen" alt=""></img>
-                <p className="info-parra">Jhon Doe</p>               
-                </div>
-               
-                </div>
-            </div>
-        </div>       
-        </Section>
-    )
+         
+        )
+       
+    
+    })}  
+         </div>
+        </Section>   
+         
+   )
+
+     
+
+  
 }
 
 const Section = styled.section`
