@@ -13,7 +13,7 @@ const City = (props) => {
         <div className="city">
         <HeroCard/>
         <CardExtenden itinerary ={props.itinerary}/>
-        <CardInfo/> 
+        <CardInfo itinerary = {props.itinerary} /> 
         <Coment/>       
         </div>
 
