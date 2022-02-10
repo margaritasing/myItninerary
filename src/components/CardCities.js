@@ -7,6 +7,7 @@ import info3 from "../img/info3.png";
 
 
 export default function CardCities(props) {
+  console.log(props)
   
   const packages = [
     "The Weekend Break",

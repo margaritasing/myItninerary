@@ -37,7 +37,7 @@ function App() {
 
   axios.get("http://localhost:4000/api/itinerary")
   .then(response => {
-    itinerary.push(response.data.response.itinerary)   
+    itinerary.push(...response.data.response.itinerary)   
   })
 
   /* const theme = useContext(ThemeContext)

@@ -14,12 +14,11 @@ const CardExtenden = (props) =>{
   
         
          
-        <div className="card mb-3 card-extend">
+        
         {props.itinerary.map((itinerario) => {
             console.log(itinerario)
-           return(   
-             
-                  
+           return(      
+            <div className="card mb-3 card-extend">
                 <div className="row g-0">
                     <div className="col-md-6">
                     <img className="img-fluid rounded-start" src={itinerario.image} alt="..."></img>
@@ -31,9 +30,12 @@ const CardExtenden = (props) =>{
                         <li className="ms-2">#Vacation</li>
                         <li className="ms-2">#Turist</li>
                     </ul>
+                        <h4 className="card-title mt-2">{itinerario.city}</h4>
                         <h5 className="card-title mt-2">{itinerario.name}</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                        <p className="card-text">{itinerario.description}</p>
+                        <p className="card-text">{itinerario.time}</p>
+                        <p className="card-text">{itinerario.price}</p>
+                        
                     </div>
                     <div className="">
                     <img src={Imagen1} className= "info-imagen" alt=""></img>
@@ -42,12 +44,13 @@ const CardExtenden = (props) =>{
                    
                     </div>
                 </div>
+              </div>
          
         )
        
     
     })}  
-         </div>
+        
         </Section>   
          
    )

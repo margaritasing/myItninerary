@@ -1,27 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import Imagen1 from "../img/simgapur4.jpg"
-import Imagen2 from "../img/singapur3.jpg"
-import Imagen3 from "../img/singapur2.jpg"
 
 
 
-const CardInfo = () => {
+const CardInfo = (props) => {
+    console.log(props)
 
     return (
-         <Section>                  
+         <Section>  
+         {props.itinerary.map((tarjetas) => {
+            
+           return(                   
              <div className="card-group cardinfo" >
                 <div className="row ">
                 <div className="card col-lg-3">
-                <img src={Imagen2} className="card-img-top mt-2" alt="..."></img>
+                <img src={tarjetas.imagen} className="card-img-top mt-2" alt="..."></img>
                 <div className="card-body">
-                    <h5 className="card-title">Go to the minimarket</h5>
+                    <h5 className="card-title">{tarjetas.tittle1}</h5>
                     <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
                 </div>
-                <div className="card col-lg-3 ">
-                <img src={Imagen1} className="card-img-top mt-2" alt="..."></img>
+              <div className="card col-lg-3 ">
+                <img src={tarjetas.imagen}className="card-img-top mt-2" alt="..."></img>
                 <div className="card-body">
                     <h5 className="card-title">Eat sea food</h5>
                     <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -29,7 +30,7 @@ const CardInfo = () => {
                 </div>
                 </div>
                 <div className="card col-lg-3">
-                <img src={Imagen3} className="card-img-top mt-2" alt="..."></img>
+                <img src={tarjetas.imagen} className="card-img-top mt-2" alt="..."></img>
                 <div className="card-body">
                     <h5 className="card-title">Go to karaoke</h5>
                     <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -41,7 +42,10 @@ const CardInfo = () => {
             </div>
 
             
-           
+           )
+       
+    
+    })}  
          
         </Section>
     

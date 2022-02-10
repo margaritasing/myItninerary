@@ -42,14 +42,14 @@ export default function HeroCard() {
 
 const Section = styled.section`
   position: relative;
-  margin-top: 2rem;
+
   width: 100%;
   height: 100%;
   .background {
     height: 100%;
     img {
       width: 100%;
-      filter: brightness(60%);
+      filter: brightness(80%);
     }
   }
   .content {
