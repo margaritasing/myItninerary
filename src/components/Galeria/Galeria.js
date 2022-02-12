@@ -2,18 +2,23 @@ import React from "react";
 import styled from "styled-components";
 
 
-import Imagen1 from "../../img/Destination1.png"
-import Imagen2 from "../../img/Destination2.png"
-import Imagen3 from "../../img/Destination3.png"
-import Imagen4 from "../../img/Destination4.png"
-import Imagen5 from "../../img/Destination5.png"
-import Imagen6 from "../../img/Destination6.png"
+import Imagen1 from "../../img/ImgCity/CiudadMexico.jpg"
+import Imagen2 from "../../img/ImgCity/LaPaz.jpg"
+import Imagen3 from "../../img/ImgCity/Estocolmo.jpg"
+import Imagen4 from "../../img/ImgCity/Lisboa.jpg"
+import Imagen5 from "../../img/ImgCity/Montevideo.jpg"
+import Imagen6 from "../../img/ImgCity/Paris.jpg"
+import Imagen7 from "../../img/ImgCity/Pekin.jpg"
+import Imagen8 from "../../img/ImgCity/Ottawa.jpg"
+import Imagen9 from "../../img/ImgCity/Bogota.jpg"
 
- const Slider = () => {
+
+
+const Galeria = () => {
   return (
     <Section>
     <div className="galeria">
-    <h1>Itinerary Favorite</h1>
+    <h1>City Favorite</h1>
    
     <div className="contenedor-imagenes">
         <div className="imagen">
@@ -51,7 +56,26 @@ import Imagen6 from "../../img/Destination6.png"
             <div className="overlay">
                 <h2>Paris</h2>
             </div>
-        </div>          
+        </div>
+        <div className="imagen">
+            <img src={Imagen7} alt=""></img>
+            <div className="overlay">
+                <h2>Pekin</h2>
+            </div>
+        </div>
+        <div className="imagen">
+            <img src={Imagen8} alt=""></img>
+            <div className="overlay">
+                <h2>Otawwa</h2>
+            </div>
+        </div>
+        <div className="imagen">
+            <img src={Imagen9} alt=""></img>
+            <div className="overlay">
+                <h2>Bogota</h2>
+            </div>
+        </div>
+      
     </div>
 </div>
     </Section>
@@ -63,7 +87,7 @@ div{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-   
+    
 }
 
 
@@ -85,14 +109,13 @@ div{
     justify-content: space-around;
     flex-wrap: wrap;
     background-color:aliceblue;
-   
 }
 
 .contenedor-imagenes .imagen{
     width: 32%;
     position: relative;
     height:250px;
-    margin-bottom:10px;
+    margin-bottom:5px;
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
 }
 .imagen img{
@@ -157,6 +180,4 @@ div{
 }
 `;
 
-
-
-export default Slider;
+export default Galeria;

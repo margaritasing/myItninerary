@@ -6,6 +6,7 @@ import Service from "./Service";
 import Top from "./Top";
 import Slider from "./Slider/Slider";
 import Heroes from "./Heroes/Heroes";
+import Galeria from "./Galeria/Galeria";
 
 
 const Home = () =>{
@@ -16,6 +17,7 @@ const Home = () =>{
             <Hero />
             <Service/>
             <Heroes/>
+            <Galeria/>
             <Slider/>        
         </div>
 
