@@ -2,14 +2,10 @@
 import React from "react";
 
 import Hero from './Hero';
-
 import Service from "./Service";
-
 import Top from "./Top";
-
-import Carousel from './Carousel';
-
-
+import Slider from "./Slider/Slider";
+import Heroes from "./Heroes/Heroes";
 
 
 const Home = () =>{
@@ -19,7 +15,8 @@ const Home = () =>{
             <Top />
             <Hero />
             <Service/>
-            <Carousel/>
+            <Heroes/>
+            <Slider/>        
         </div>
 
 

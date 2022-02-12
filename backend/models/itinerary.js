@@ -7,22 +7,9 @@ const itinerarySchema = new mongoose.Schema ({
     price: {type:String,require:true},
     time: {type:String,require:true},    
     image: {type:String,require:true},
-    imagen : [{
-        imagen1 : {type:String,require:true},
-        imagen2 : {type:String,require:true},
-        imagen3 : {type:String,require:true},        
-         }],
-    tittle: [{
-        tittle1 : {type:String,require:true},
-        tittle2 : {type:String,require:true},
-        tittle3 : {type:String,require:true},  
-    }],
-    commenta:[{
-        comenta1 : {type:String,require:true},
-        comenta2 : {type:String,require:true},
-        comenta3 : {type:String,require:true}, 
-    }],
-   
+    imagen : {type:String,require:true},
+    tittle:{type:String,require:true},
+    commenta:{type:String,require:true},   
 })
 
 const Itinerary = mongoose.model("itinerary",itinerarySchema)
