@@ -7,6 +7,7 @@ import Top from "./Top";
 import Slider from "./Slider/Slider";
 import Heroes from "./Heroes/Heroes";
 import Galeria from "./Galeria/Galeria";
+import Opinion from "./Opinion/Opinion";
 
 
 const Home = () =>{
@@ -18,7 +19,9 @@ const Home = () =>{
             <Service/>
             <Heroes/>
             <Galeria/>
-            <Slider/>        
+            <Opinion/>
+            <Slider/>  
+                  
         </div>
 
 
