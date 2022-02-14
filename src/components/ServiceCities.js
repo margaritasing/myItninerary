@@ -36,7 +36,7 @@ export default function ServiceCities() {
     <Section id="ServiceCities">
       {data.map((service, index) => {
         return (
-          <div className="service">
+          <div className="service" key={index}>
             <div className="icon">
               <img src={service.icon} alt="" />
             </div>
@@ -68,7 +68,7 @@ const Section = styled.section`
     }
     .icon {
       img {
-        margin-left:100px;
+        margin-left: 100px;
         height: 2.4rem;
       }
     }

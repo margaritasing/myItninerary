@@ -5,10 +5,9 @@ import info1 from "../img/info1.png";
 import info2 from "../img/info2.png";
 import info3 from "../img/info3.png";
 
-
 export default function CardCities(props) {
-  console.log(props)
-  
+ 
+
   const packages = [
     "The Weekend Break",
     "The Package Holiday",
@@ -19,7 +18,6 @@ export default function CardCities(props) {
   const [active, setActive] = useState(1);
   return (
     <Section id="cities">
-      
       <div className="title">
         <h2>Destinations</h2>
       </div>
@@ -38,12 +36,12 @@ export default function CardCities(props) {
         </ul>
       </div>
       <div className="destinations">
-        {props.data.map((destination) => {
+        {props.data.map((destination, index) => {
           return (
-            <div className="destination">
+            <div className="destination" key={index}>
               <img className="cardcities" src={destination.image} alt="" />
               <h2>{destination.name}</h2>
-              <h3>{destination.country}</h3>              
+              <h3>{destination.country}</h3>
               <p>{destination.continents}</p>
               <p>{destination.description}</p>
               <p>{destination.demonym}</p>
@@ -60,16 +58,12 @@ export default function CardCities(props) {
                 <span>{destination.language}</span>
               </div>
               <Link type="button" className="btn btn-info" to="/country">
-              Info
-             </Link>
-             
+                Info
+              </Link>
             </div>
-            
           );
         })}
       </div>
-    
-    
     </Section>
   );
 }
@@ -79,10 +73,10 @@ const Section = styled.section`
   .title {
     text-align: center;
   }
-  .cardcities{
-    width:100%;
-    height:250px;
-    border-radius:15px;
+  .cardcities {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
   }
   .packages {
     display: flex;
@@ -157,10 +151,9 @@ const Section = styled.section`
         }
       }
     }
-    .cardcities{
-      width:100%;
-      height:200px;
-      
+    .cardcities {
+      width: 100%;
+      height: 200px;
     }
     .destinations {
       grid-template-columns: 1fr;

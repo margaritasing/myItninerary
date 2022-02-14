@@ -4,42 +4,39 @@ import styled from "styled-components";
 
 
 const CardInfo = (props) => {
-    console.log(props)
+   
 
     return (
          <Section>  
-         {props.itinerary.map((tarjetas) => 
+         {props.itinerary.map((tarjetas,  index) => 
             
                         
-             <div className="card-group cardinfo" >
+             <div className="card-group cardinfo" key={index} >
                 <div className="row ">
-                <div className="card col-lg-3">
-                            
-                <img src={tarjetas.imagen[0].imagen1} className="card-img-top mt-2" alt="..."></img>
-           
+                <div className="card col-lg-3">                            
+                <img src={tarjetas.image} className="card-img-top mt-2" alt="..."></img>           
                 <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 className="card-title">{tarjetas.name}</h5>
+                    <p className="card-text">{tarjetas.description}</p>
+                    <p className="card-text"><small className="text-muted">{tarjetas.price}</small></p>
                 </div>
                 </div>
               <div className="card col-lg-3 ">
-                <img src={tarjetas.imagen[0].imagen2} className="card-img-top mt-2" alt="..."></img>
+                <img src={tarjetas.image} className="card-img-top mt-2" alt="..."></img>
                 <div className="card-body">
-                    <h5 className="card-title">Eat sea food</h5>
-                    <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                <h5 className="card-title">{tarjetas.name}</h5>
+                    <p className="card-text">{tarjetas.description}</p>
+                    <p className="card-text"><small className="text-muted">{tarjetas.price}</small></p>
                 </div>
                 </div>
                 <div className="card col-lg-3">
-                <img src={tarjetas.imagen[0].imagen3} className="card-img-top mt-2" alt="..."></img>
+                <img src={tarjetas.image} className="card-img-top mt-2" alt="..."></img>
                 <div className="card-body">
-                    <h5 className="card-title">Go to karaoke</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 className="card-title">{tarjetas.name}</h5>
+                    <p className="card-text">{tarjetas.description}</p>
+                    <p className="card-text"><small className="text-muted">{tarjetas.price}</small></p>
                 </div>
                 </div>
-
                 </div>
             </div>
 

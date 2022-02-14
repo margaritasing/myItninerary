@@ -7,7 +7,7 @@ import Imagen1 from "../img/avatarImage.png"
 
 //aqui estoy revisando el porque no se pinta el componente.
 const CardExtenden = (props) =>{
-    console.log(props)  
+   
        
    return(
     <Section id="itinerario"> 
@@ -15,10 +15,10 @@ const CardExtenden = (props) =>{
         
          
         
-        {props.itinerary.map((itinerario) => {
-            console.log(itinerario)
+        {props.itinerary.map((itinerario, index) => {
+            
            return(      
-            <div className="card mb-3 card-extend">
+            <div className="card mb-3 card-extend" key={index}>
                 <div className="row g-0">
                     <div className="col-md-6">
                     <img className="img-fluid rounded-start" src={itinerario.image} alt="..."></img>
