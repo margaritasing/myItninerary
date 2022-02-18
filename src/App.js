@@ -43,7 +43,10 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/city" element={<CardCities />} />
-          <Route path="/country" element={<City itinerary={itinerary} />} />
+          <Route
+            path="/country/:id"
+            element={<City itinerary={itinerary} data={data} />}
+          />
         </Routes>
         <Footer />
       </div>

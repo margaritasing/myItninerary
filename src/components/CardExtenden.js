@@ -33,9 +33,7 @@ const CardExtenden = (props) =>{
                         <h4 className="card-title mt-2">{itinerario.city}</h4>
                         <h5 className="card-title mt-2">{itinerario.name}</h5>
                         <p className="card-text">{itinerario.description}</p>
-                        <p className="card-text">{itinerario.time}</p>
-                        <p className="card-text">{itinerario.price}</p>
-                        
+                                               
                     </div>
                     <div className="">
                     <img src={Imagen1} className= "info-imagen" alt=""></img>

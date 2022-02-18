@@ -6,8 +6,6 @@ import info2 from "../img/info2.png";
 import info3 from "../img/info3.png";
 
 export default function CardCities(props) {
- 
-
   const packages = [
     "The Weekend Break",
     "The Package Holiday",
@@ -57,7 +55,11 @@ export default function CardCities(props) {
                 <span>{destination.region}</span>
                 <span>{destination.language}</span>
               </div>
-              <Link type="button" className="btn btn-info" to="/country">
+              <Link
+                type="button"
+                className="btn btn-info"
+                to={"/country/" + destination._id}
+              >
                 Info
               </Link>
             </div>
