@@ -11,9 +11,6 @@ const CardExtenden = (props) =>{
        
    return(
     <Section id="itinerario"> 
-  
-        
-         
         
         {props.itinerary.map((itinerario, index) => {
             

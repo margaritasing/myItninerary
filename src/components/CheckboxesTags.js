@@ -13,7 +13,7 @@ export default function CheckboxesTags() {
     <Autocomplete
       multiple
       id="checkboxes-tags-demo"
-      options={topCountry}
+      options={topContinent}
       disableCloseOnSelect
       getOptionLabel={(option) => option.continent}
       renderOption={(option, { selected }) => (
@@ -35,8 +35,7 @@ export default function CheckboxesTags() {
   );
 }
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const topCountry = [
+const topContinent = [
   { continent: 'America'},
   { continent: 'Asia'},
   { continent: 'Europa'},

@@ -55,11 +55,7 @@ export default function CardCities(props) {
                 <span>{destination.region}</span>
                 <span>{destination.language}</span>
               </div>
-              <Link
-                type="button"
-                className="btn btn-info"
-                to={"/country/" + destination._id}
-              >
+              <Link type="button"  className="btn btn-info" to={"/country/" + destination._id}>
                 Info
               </Link>
             </div>

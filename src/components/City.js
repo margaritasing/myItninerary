@@ -8,11 +8,11 @@ import { useParams } from "react-router-dom";
 
 const City = (props) => {
   const { id } = useParams();
-  const citySelected = props.data.filter((city) => city._id == id);
+  const citySelected = props.data.filter(city => city._id == id);
   console.log(citySelected);
-  const cityItinerary = citySelected.map((itin) =>
-    props.itinerary.filter((city) => city.city == itin.name)
-  );
+  const cityItinerary = 
+    props.itinerary.filter(city => city.city == citySelected[0].name)
+  
 
   console.log(cityItinerary);
 
