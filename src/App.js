@@ -15,6 +15,7 @@ import SignUp from "./components/SignUp";
 import CardCities from "./components/CardCities";
 import City from "./components/City";
 import Top from "./components/Top";
+import SingUpYSingIn from "./components/SingUpYSingIn/SingUpYSingIn";
 
 function App() {
   const data = [];
@@ -40,12 +41,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cities" element={<Cities data={data} />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SingUpYSingIn />} />
+          <Route path="/signup" element={<SingUpYSingIn />} />
           <Route path="/city" element={<CardCities />} />
-          <Route
-            path="/country/:id"
-            element={<City itinerary={itinerary} data={data} />}
+          <Route path="/country/:id" element={<City itinerary={itinerary} data={data} />}
           />
         </Routes>
         <Footer />
