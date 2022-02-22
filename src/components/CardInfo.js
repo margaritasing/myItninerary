@@ -2,35 +2,37 @@ import React, {useState} from "react";
 import styled from "styled-components";
 
 const CardInfo = (props) => {
-  console.log(props.itinerary);
+ 
 
   return (
        <Section>  
-       {props.itinerary.map( data=>           
-                      
+                              
            <div className="card-group cardinfo">
-              <div className="row ">
-              <div className="card">
-                          
-              <img src={data.image} className="card-img-top mt-2" alt="..."></img>
-         
+           <div className="container">
+           <div className="row">
+           {props.itinerary.map( data=> 
+              <div className="card col-lg-3 ms-3">                          
+              <img src={data.image} className="card-img-top mt-2" alt="..."></img>         
               <div className="card-body">
                   <h5 className="card-title">{data.name}</h5>
                   <p className="card-text">{data.description}</p>
                   <p className="card-text"><small className="text-muted">{data.price}</small></p>
               </div>
               </div>
-              </div>
+           )}
+           
+           </div>          
+           </div>              
           </div>          
-         )   
-  }         
+           
+        
       </Section>
     )
 }
 
 const Section = styled.section`
   .cardinfo {
-    margin-left: 280px; 
+    margin-left: 240px; 
     margin-bottom: 10px;    
   }  
 
@@ -41,7 +43,6 @@ const Section = styled.section`
     background-color: #9ad0ec;
   }
  
-
   img {
     width: 100%;
     height: 200px;

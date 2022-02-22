@@ -3,7 +3,7 @@ import "./SingUpYSingIn.css";
 
 const SIngUpYSingIn = () => {
   return (
-    <div>
+    <div className="singupysingin">
     <a href="https://front.codes/" className="logo" target="_blank">
       <img src="https://assets.codepen.io/1462889/fcy.png" alt=".." />
     </a>

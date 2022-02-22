@@ -9,16 +9,16 @@ import { useParams } from "react-router-dom";
 const City = (props) => {
   const { id } = useParams();
   const citySelected = props.data.filter(city => city._id == id);
-  console.log(citySelected);
+ 
   const cityItinerary = 
     props.itinerary.filter(city => city.city == citySelected[0].name)
   
 
-  console.log(cityItinerary);
+ 
 
   return (
     <div className="city">
-      <HeroCard />
+      <HeroCard  itinerary={citySelected}/>
       <CardExtenden itinerary={citySelected} />
       <CardInfo itinerary={cityItinerary} />
       <Coment />

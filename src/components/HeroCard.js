@@ -2,36 +2,44 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import homeImage from "../img/singapur.jpg";
+
+
 export default function HeroCard() {
+ 
+
+    
+
   return (
     <Section id="HeroCard">
-      <div className="background">
-        <img src={homeImage} alt="" />
-      </div>
-      <div className="content">
+    <div className="background">
+    <img src={homeImage} alt="" />
+    </div>
+  
+    <div className="content">
+  
         <div className="title">
-          <h1>SINGAPUR</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-            natus, enim ipsam magnam odit deserunt itaque? Minima earum velit
-            tenetur!
-          </p>
-        </div>
+          <h1>Itinerary</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              natus, enim ipsam magnam odit deserunt itaque? Minima earum velit
+              tenetur!
+            </p>
+        </div>     
         <div className="search">
+            <div className="container">
+              <label htmlFor="">Where you want to go</label>
+              <input type="text" placeholder="Search Your location" />
+            </div>
           <div className="container">
-            <label htmlFor="">Where you want to go</label>
-            <input type="text" placeholder="Search Your location" />
+              <label htmlFor="">Check-in</label>
+              <input type="date" />
           </div>
           <div className="container">
-            <label htmlFor="">Check-in</label>
-            <input type="date" />
-          </div>
-          <div className="container">
-            <label htmlFor="">Check-out</label>
-            <input type="date" />
+              <label htmlFor="">Check-out</label>
+              <input type="date" />
           </div>
           <Link className="nav-link" aria-current="page" to="/cities">
-          <button>Reserve</button>
+           <button>Reserve</button>
           </Link>
         
         </div>

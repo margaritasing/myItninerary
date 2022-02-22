@@ -17,6 +17,7 @@ const CardExtenden = (props) =>{
            return(      
             <div className="card mb-3 card-extend" key={index}>
                 <div className="row g-0">
+
                     <div className="col-md-6">
                     <img className="img-fluid rounded-start" src={itinerario.image} alt="..."></img>
                     </div>
@@ -35,16 +36,16 @@ const CardExtenden = (props) =>{
                     <div className="">
                     <img src={Imagen1} className= "info-imagen" alt=""></img>
                     <p className="info-parra">Jhon Doe</p>               
+                    </div>                   
                     </div>
-                   
-                    </div>
+
                 </div>
               </div>
          
         )
+    })}  
        
     
-    })}  
         
         </Section>   
          
