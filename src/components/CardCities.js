@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import info1 from "../img/info1.png";
 import info2 from "../img/info2.png";
 import info3 from "../img/info3.png";
+import { useStateValue } from "../reducer/StateProvider";
 
 export default function CardCities(props) {
+
+  const [{cities}] = useStateValue()
   const packages = [
     "The Weekend Break",
     "The Package Holiday",
@@ -34,7 +37,7 @@ export default function CardCities(props) {
         </ul>
       </div>
       <div className="destinations">
-        {props.data.map((destination, index) => {
+        {cities.map((destination, index) => {
           return (
             <div className="destination" key={index}>
               <img className="cardcities" src={destination.image} alt="" />

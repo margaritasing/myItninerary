@@ -1,25 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-import Imagen from "../img/ImgCity/Berlin.jpg"
+
 import Imagen1 from "../img/avatarImage.png"
 
 
 //aqui estoy revisando el porque no se pinta el componente.
 const CardExtenden = (props) =>{
+    const city=props.itinerary
+    console.log(city)
    
        
    return(
-    <Section id="itinerario"> 
-        
-        {props.itinerary.map((itinerario, index) => {
-            
-           return(      
-            <div className="card mb-3 card-extend" key={index}>
-                <div className="row g-0">
+       
+        <Section id="itinerario">          
+        { city.map( data =>             
+            <div className="card mb-3 card-extend" key={data._id}>
+                <div className="row g-0">  
 
                     <div className="col-md-6">
-                    <img className="img-fluid rounded-start" src={itinerario.image} alt="..."></img>
+                    <img className="img-fluid rounded-start" src={data.image} alt="..."></img>
                     </div>
                     <div className="col-md-6">
                     <div className="card-body">
@@ -28,25 +28,18 @@ const CardExtenden = (props) =>{
                         <li className="ms-2">#Vacation</li>
                         <li className="ms-2">#Turist</li>
                     </ul>
-                        <h4 className="card-title mt-2">{itinerario.city}</h4>
-                        <h5 className="card-title mt-2">{itinerario.name}</h5>
-                        <p className="card-text">{itinerario.description}</p>
-                                               
+                        <h4 className="card-title mt-2">{data.city}</h4>
+                        <h5 className="card-title mt-2">{data.name}</h5>
+                        <p className="card-text">{data.description}</p>                                               
                     </div>
                     <div className="">
                     <img src={Imagen1} className= "info-imagen" alt=""></img>
                     <p className="info-parra">Jhon Doe</p>               
                     </div>                   
-                    </div>
-
+                    </div>                
                 </div>
-              </div>
-         
-        )
-    })}  
-       
-    
-        
+              </div>  
+        )}
         </Section>   
          
    )

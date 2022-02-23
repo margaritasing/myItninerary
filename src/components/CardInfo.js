@@ -5,13 +5,12 @@ const CardInfo = (props) => {
  
 
   return (
-       <Section>  
-                              
+       <Section>                                
            <div className="card-group cardinfo">
            <div className="container">
            <div className="row">
            {props.itinerary.map( data=> 
-              <div className="card col-lg-3 ms-3">                          
+              <div className="card col-lg-3 ms-3" key={data._id}>                          
               <img src={data.image} className="card-img-top mt-2" alt="..."></img>         
               <div className="card-body">
                   <h5 className="card-title">{data.name}</h5>
