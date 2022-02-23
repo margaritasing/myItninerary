@@ -7,7 +7,7 @@ import ServiceCities from "./ServiceCities";
 
 const Cities = (props) => {
   return (
-    <div className="cities" id="cities">
+    <div className="cities" id="cities" key={props._id}>
       <CheckboxesTags data={props.data} />
       <CardCities data={props.data} />
       <Testimonials />

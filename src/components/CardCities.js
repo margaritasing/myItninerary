@@ -37,9 +37,9 @@ export default function CardCities(props) {
         </ul>
       </div>
       <div className="destinations">
-        {cities.map((destination, index) => {
+        {cities.map((destination) => {
           return (
-            <div className="destination" key={index}>
+            <div className="destination" key={destination._id}>
               <img className="cardcities" src={destination.image} alt="" />
               <h2>{destination.name}</h2>
               <h3>{destination.country}</h3>
@@ -58,7 +58,7 @@ export default function CardCities(props) {
                 <span>{destination.region}</span>
                 <span>{destination.language}</span>
               </div>
-              <Link type="button"  className="btn btn-info" to={"/country/" + destination._id}>
+              <Link type="button"  className="btn btn-info" to={"/city/" + destination._id}>
                 Info
               </Link>
             </div>

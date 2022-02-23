@@ -8,7 +8,7 @@ import Imagen1 from "../img/avatarImage.png"
 //aqui estoy revisando el porque no se pinta el componente.
 const CardExtenden = (props) =>{
     const city=props.itinerary
-    console.log(city)
+    
    
        
    return(

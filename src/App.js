@@ -38,7 +38,7 @@ function App() {
          type:actionType.ITINERARIESDB,
          itineraries: response.data.response.itinerary
        })
-       console.log(itineraries)
+      
      });
   })
   },[])
@@ -62,9 +62,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cities" element={<Cities />} />
           <Route path="/signin" element={<SingUpYSingIn />} />
-          <Route path="/signup" element={<SingUpYSingIn />} />
-          <Route path="/city" element={<CardCities/>} />
-          <Route path="/country/:id" element={<City/>}
+          <Route path="/signup" element={<SingUpYSingIn />} />          
+          <Route path="/city/:id" element={<City/>}
           />
         </Routes>
         <Footer />

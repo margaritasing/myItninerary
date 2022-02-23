@@ -15,9 +15,7 @@ const City = () => {
   const {id}=useParams()
   const citySelecter = cities.filter(city=>city._id === id)
   const itinerarySelecter= itineraries.filter(itin =>itin.city=== citySelecter[0].name)
-  console.log(itinerarySelecter)
-  console.log(itineraries)
-  console.log(citySelecter)
+ 
 
 
  /*  const { id } = useParams();
