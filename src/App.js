@@ -15,8 +15,8 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Cities from "./components/Cities";
 import Navbar from "./components/NavBar";
-/* import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp"; */
+ import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp"; 
 import CardCities from "./components/CardCities";
 import City from "./components/City";
 import Top from "./components/Top";
@@ -61,8 +61,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cities" element={<Cities />} />
-          <Route path="/signin" element={<SingUpYSingIn />} />
-          <Route path="/signup" element={<SingUpYSingIn />} />          
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />          
           <Route path="/city/:id" element={<City/>}
           />
         </Routes>

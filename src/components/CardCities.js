@@ -6,7 +6,7 @@ import info2 from "../img/info2.png";
 import info3 from "../img/info3.png";
 import { useStateValue } from "../reducer/StateProvider";
 
-export default function CardCities(props) {
+export default function CardCities() {
 
   const [{cities}] = useStateValue()
   const packages = [

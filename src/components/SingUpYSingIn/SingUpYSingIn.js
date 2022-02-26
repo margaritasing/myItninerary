@@ -1,7 +1,13 @@
 import React from 'react'
 import "./SingUpYSingIn.css";
 
+
 const SIngUpYSingIn = () => {
+
+  
+  
+  
+
   return (
     <div className="singupysingin">
     <a href="https://front.codes/" className="logo" target="_blank">

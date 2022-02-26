@@ -15,13 +15,13 @@ function Register() {
         {showMenu && (
           <div className="h-usuario">
             <LinkRouter to="/signin">
-              <button type="button" class="btn btn-dark bg-dark text-white mt-2">
+              <button type="button" className="btn btn-dark bg-dark text-white mt-2">
                 Sign In
               </button>
             </LinkRouter>
 
             <LinkRouter to="/signup">
-              <button type="button" class="btn btn-info bg-info  text-white ms-3 mt-2">
+              <button type="button" className="btn btn-info bg-info  text-white ms-3 mt-2">
                 Sign Up
               </button>
             </LinkRouter>

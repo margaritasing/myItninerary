@@ -13,6 +13,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 
+import axios from 'axios';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -48,6 +50,36 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp() {
   const classes = useStyles();
+  async function NewUser(event){
+    event.preventDefault()
+    const NuevoUsuario = {firstname:event.target[0].value,
+                          lastname:event.target[2].value,
+                          email:event.target[4].value,
+                          password:event.target[6].value}
+   
+    
+  
+ 
+   await axios.post("http://localhost:4000/api/signup",{NuevoUsuario} )
+   .then(response=> //alert(response.data.response))
+ 
+   // if(response.success==="falseVAL"){
+ 
+   //  console.log(response.data)
+   // }
+   
+   displayMessages(response.data)
+ )
+ function displayMessages(data){
+   if(data.success==="falseVAL"){
+ console.log(data.response.error.details)
+     data.response.error.details.map(error=>alert(error.message))
+   }
+ }
+  }
+ 
+
+
 
   return (
     <Container component="main" maxWidth="xs">
@@ -59,7 +91,7 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={NewUser}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
