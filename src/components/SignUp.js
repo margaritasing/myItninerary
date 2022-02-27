@@ -50,6 +50,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp() {
   const classes = useStyles();
+
+
   async function NewUser(event){
     event.preventDefault()
     const NuevoUsuario = {firstname:event.target[0].value,
@@ -72,11 +74,13 @@ export default function SignUp() {
  )
  function displayMessages(data){
    if(data.success==="falseVAL"){
+     console.log(data)
  console.log(data.response.error.details)
-     data.response.error.details.map(error=>alert(error.message))
+ alert(data.response.error.details.map(error=>error.message))
    }
  }
   }
+ 
  
 
 
@@ -91,7 +95,7 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate onSubmit={NewUser}>
+         <form className={classes.form} noValidate onSubmit={NewUser}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -147,14 +151,14 @@ export default function SignUp() {
             </Grid>
           </Grid>
           <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Sign Up
-          </Button>
+          type="submit"
+          fullWidth
+          variant="contained"
+          color="primary"
+          className={classes.submit}
+        >
+          Sign Up
+        </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Link href="/signin" variant="body2">

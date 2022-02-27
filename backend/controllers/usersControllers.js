@@ -12,7 +12,7 @@ const usersControllers = {
             const UsuarioExiste= await User.findOne({email})
 
             if (UsuarioExiste){
-                res.json({sucess:"falseUE", response:"Usuario ya existe, realice el SignIn"})
+                res.json({success:"falseUE", response:"Usuario ya existe, realice el SignIn"})
             }
 
             else{
@@ -24,12 +24,12 @@ const usersControllers = {
                     password: passwordHash
                 })
                 await NewUser.save()
-                res.json({sucess:"trueUE", response: "Usuario creado exitosamente"})
+                res.json({success:"trueUE", response: "Usuario creado exitosamente"})
             }
 
         }
 
-        catch(error){res.json({sucess:"falseUE",response:null,error:error})}
+        catch(error){res.json({success:"falseUE",response:null,error:error})}
         
     
     }}

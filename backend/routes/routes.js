@@ -3,7 +3,7 @@ const citiesController = require("../controllers/datosControllers")
 const {ObtenerCiudades, ObtenerItynerarios} = citiesController // desestructuración del controlador de Ciudades
 const usersControllers = require ("../controllers/usersControllers")
 const {nuevoUsuario} = usersControllers
-
+const validator = require("../controllers/validator")
 
 Router.route("/datos") // "datos" parte de la url de la consulta
 .get(ObtenerCiudades)
@@ -13,7 +13,7 @@ Router.route("/itinerary") // "datos" parte de la url de la consulta
 .get(ObtenerItynerarios)
 
 Router.route("/signup")
-.post(nuevoUsuario)
+.post( validator, nuevoUsuario)
 
 
 module.exports = Router

@@ -22,7 +22,7 @@ export const useFetchCity = () => {
 
     console.log(data.response)
 
-    if (data.response.cities) {
+    if (data.response) {
       setCity(data.response);
     } else {
       setCity(data);
